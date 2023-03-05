@@ -1,0 +1,19 @@
+{
+    "name": "feierstoff-gmbh/symfony-toolbox-bundle",
+    "description": "Symfony bundle to kickstart a new symfony project.",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "Feierstoff\\ToolboxBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Til Pöhnitzsch",
+            "email": "til.poehnitzsch@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "^6.2"
+    }
+}
