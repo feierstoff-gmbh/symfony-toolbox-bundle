@@ -2,13 +2,11 @@
 
 namespace Feierstoff\ToolboxBundle\Serializer;
 
-use App\ShopwareEntity\SCoreStates;
 use Doctrine\Common\Collections\Collection;
 use Feierstoff\ToolboxBundle\EntityInterface\UserEntityInterface;
 use Feierstoff\ToolboxBundle\Exception\InternalServerException;
 use Feierstoff\ToolboxBundle\Serializer\Attribute\FormatDateTime;
 use Feierstoff\ToolboxBundle\Serializer\Attribute\Ignore;
-use Feierstoff\ToolboxBundle\Serializer\Attribute\HasPrivilege;
 use Feierstoff\ToolboxBundle\Serializer\Attribute\OnlyWhen;
 use ReflectionException;
 
@@ -40,16 +38,6 @@ class Serializer {
                     $constructor[$name] = $this->deserializeRecursive($constructorArg->getType()->getName(), $params[$name], $round + 1, $maxDepth);
                 }
             }
-
-/*            $valueType = gettype($params[$name]);
-            if ($valueType != $constructorArg->getType()) {
-                if (str_contains($constructorArg->getType()->getName(), "Entity")) {
-                    if (gettype($valueType) == "array") {
-
-                    }
-                }
-            }*/
-
         }
     }
 
