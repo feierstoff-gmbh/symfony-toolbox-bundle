@@ -15,6 +15,9 @@ class ToolboxExtension extends Extension {
         // array one can access to get the values from the config file
         $config = $this->processConfiguration($configuration, $configs);
 
+        $loader->load("route_controllers.php");
+        $loader->load("services.php");
+
         /* --- CONTROLLERS --- */
 /*        $loader->load("controllers.php");
 
