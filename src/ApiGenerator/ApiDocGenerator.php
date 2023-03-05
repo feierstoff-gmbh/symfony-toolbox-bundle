@@ -26,7 +26,12 @@ class ApiDocGenerator {
             $controller = explode("::", $route->getDefault("_controller"))[0];
             $endpoint = explode("/", $path)[2];
 
-            $method = $route->getMethods()[0];
+            $methods = $route->getMethods();
+            if (!$methods) {
+                $method = "UNDEFINED";
+            } else {
+                $method = $methods[0];
+            }
 
             $routeDefinition = [
                 "path" => $path,
