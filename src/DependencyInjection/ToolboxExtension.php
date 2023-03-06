@@ -17,6 +17,8 @@ class ToolboxExtension extends Extension {
 
         $loader->load("route_controllers.php");
         $loader->load("services.php");
+        $loader->load("listeners.php");
+        $loader->load("commands.php");
 
         /* --- CONTROLLERS --- */
 /*        $loader->load("controllers.php");
