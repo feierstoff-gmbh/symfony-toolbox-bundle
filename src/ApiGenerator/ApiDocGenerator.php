@@ -23,7 +23,6 @@ class ApiDocGenerator {
             $path = $route->getPath();
             if (!str_starts_with($path, "/api/")) continue;
 
-            $controller = explode("::", $route->getDefault("_controller"))[0];
             $endpoint = explode("/", $path)[2];
 
             $methods = $route->getMethods();
