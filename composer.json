@@ -1,6 +1,7 @@
 {
     "name": "feierstoff-gmbh/symfony-toolbox-bundle",
     "description": "Symfony bundle to kickstart a new symfony project.",
+    "version": "0.0.1",
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": {
